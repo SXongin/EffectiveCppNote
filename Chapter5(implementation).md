@@ -2,7 +2,7 @@
 
 ## Item 26 Postpone variable definitions as long as possible
 
-- 尽可能延后变量定义式的出现。这样做可增加程序的清晰度并改善程序效率。sx：循环内使用变量应该比较赋值操作和构造及析构函数的成本，决定循环外定义还是循环内定义。
+- 尽可能延后变量定义式的出现。这样做可增加程序的清晰度并改善程序效率。ps：循环内使用变量应该比较赋值操作和构造及析构函数的成本，决定循环外定义还是循环内定义。
 
 ## Item 27 Minimize casting
 
@@ -25,7 +25,7 @@
 - 将大多数 inlining 限制在小型、被频繁调用的函数身上。这可使日后的调试过程和二进制升级（binary upgradability）更容易，也可使潜在的代码膨胀问题最小化，是程序的速度提升机会最大化。
 - 不要只因为 function templates 出现在头文件上，就将他们声明为 inline。
 
-## Item 31 Minimize compolation dependencies between files
+## Item 31 Minimize compilation dependencies between files
 
 - 支持“编译依存性最小化”的一般构想是：相较于声明式，不要相依于定义式。基于此构想的两个手段是 Handle classes 和 Interface classes。
 - 程序库头文件应该以“完全且仅有声明式”（full and declaration-only forms）的形式存在；这种做法不论是否涉及 templates 都适用。

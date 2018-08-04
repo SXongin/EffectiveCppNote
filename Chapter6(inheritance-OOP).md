@@ -9,7 +9,7 @@
 - derived classes 内的名称会遮掩 base classes 内的名称。在 public 继承下从来没有人希望如此。
 - 为了让被遮盖的名称再见天日，可使用 using 声明式或转交函数（forwarding functions）。
 
-## Item 34 Defferentiate between inheritance of interface and inheritance of implementation
+## Item 34 Differentiate between inheritance of interface and inheritance of implementation
 
 - 接口继承和实现继承不同。在 public 继承之下，derived classes 总是继承 base class 的接口。
 - pure virtual 函数只具体指定接口继承。
@@ -37,10 +37,10 @@
 
 ## Item 39 Use private inheritance judiciously
 
-- Private 继承意味 is-implemented-interms-of（根据某物实现出）。它通常比复合（composition）的级别低。但是当 derived class 需要访问 protected base class 的成员，或需要重新定义继承而来的 virutal 函数时，这么设计是合理的。
+- Private 继承意味 is-implemented-in-terms-of（根据某物实现出）。它通常比复合（composition）的级别低。但是当 derived class 需要访问 protected base class 的成员，或需要重新定义继承而来的 virtual 函数时，这么设计是合理的。
 - 和复合（composition）不同，private 继承可以造成 empty base 最优化。这对致力于“对象尺寸最小化”的程序库开发者而言，可能很重要。
 
-## Item 40 Use mulitipie inheritance judiciouly
+## Item 40 Use multiple inheritance judiciously
 
 - 多重继承比单一继承复杂。它可能导致新的歧义性，以及对 virtual 继承的需要。
 - virtual 继承会增加大小、速度、初始化（及赋值）复杂度等等成本。如果virtual base classes 不带任何数据，将是最具有使用价值的情况。

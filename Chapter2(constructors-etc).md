@@ -1,4 +1,4 @@
-# Constructors, Destructors, and Assignment Opeators
+# Constructors, Destructors, and Assignment Operators
 
 ## Item 5 Know what functions C++ silently writes and calls
 

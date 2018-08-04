@@ -1,6 +1,6 @@
 # Templates and Generic Programming
 
-## Item 41 Understand implicit interfaces and compile-time  polymorphism
+## Item 41 Understand implicit interfaces and compile-time polymorphism
 
 - classes 和 templates 都支持接口（interfaces）和多态（polymorphism）。
 - 对 classes 而言接口时显示的（explicit），以函数签名为中心。多态则是通过virtual函数发生于运行期。
@@ -19,7 +19,7 @@
 
 - Templates 生成多个 classes 和多个函数，所以任何 template 代码都不该与某个造成膨胀的 template 参数产生相依关系。
 - 因非类型模板参数（non-type template parameters）而造成的代码膨胀，往往可消除，做法是以函数参数或 class 成员变量替换 template 参数。
-- 因参数类型（type parameters）而造成的代码膨胀，往往可降低，做法是让带有完全相同二进制表述（binary representations）的具现类型（istantiation types）共享实现码。
+- 因参数类型（type parameters）而造成的代码膨胀，往往可降低，做法是让带有完全相同二进制表述（binary representations）的具现类型（instantiation types）共享实现码。
 
 ## Item 45 Use member function templates to accept "all compatible types"
 

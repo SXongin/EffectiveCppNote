@@ -5,7 +5,7 @@
 - 为防止资源泄露，请使用 RAII 对象，它们在构造函数中获得资源并在析构函数中释放资源。
 - 两个常被使用的 RAII classes 分别是 tr1::shared_ptr 和 auto_ptr。前者通常是较佳选择，因为其 copy 行为较为直观。若选择 auto_ptr, 负责会使它（被复制物）指向 null。（ps：C++11 标准下可以使用 std::shared_ptr 和 std::uniq_ptr 代替。）
 
-## Item 14 Think carefully about copying beavior in resource-managing classes
+## Item 14 Think carefully about copying behavior in resource-managing classes
 
 - 复制 RAII 对象必须一并复制它所管理的资源，所以资源的 copying 行为决定 RAII 对象的 copying 行为。
 - 普遍而常见的 RAII class copying 行为是：抑制 copying、施行引用计数法（reference counting）、（ps：复制底部资源和转移底部资源的所有权）。

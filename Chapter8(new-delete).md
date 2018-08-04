@@ -23,5 +23,5 @@
 
 ## Item 52 Write placement delete if you write placement new
 
-- 当你写一个 palcement operator new，请确定也写出了对应的 placement operator delete。如果没有这样做，你的程序可能会发生隐微而时断时续的内存泄露。
+- 当你写一个 placement operator new，请确定也写出了对应的 placement operator delete。如果没有这样做，你的程序可能会发生隐微而时断时续的内存泄露。
 - 当你声明 placement new 和 placement delete，请不要无意识（非故意）地遮掩了它们地正常版本。
