@@ -1,4 +1,4 @@
-# Design and  Declarations
+# Design and Declarations
 
 ## Item 18 Make interfaces easy to use correctly and hard to use incorrectly
 
@@ -9,7 +9,7 @@
 
 ## Item 19 Treat class design as type design
 
-- **新 type 的对象应该如何被创建和销毁？**这会影响到你的 class 的构造函数和析构函数以及内存分配函数和释放函数（operator new，operator new[]，operator delete 和 operator delete[]——见第8章）的设计，当然前提是如果你打算撰写它们。
+- **新 type 的对象应该如何被创建和销毁**这会影响到你的 class 的构造函数和析构函数以及内存分配函数和释放函数（operator new，operator new[]，operator delete 和 operator delete[]——见第8章）的设计，当然前提是如果你打算撰写它们。
 - **对象的初始化和对象的赋值应该有什么样的差别？**这个答案决定了你的构造函数和赋值（assignment）操作符的行为，以及其间的差异。很重要的是别混淆了”是“初始化”和“赋值”，因为它们对应于不同的函数调用（见条款4）。
 - **新 type 的对象如果被 passed by value（以值传递），意味着什么？**记住，copy 构造函数用来定义一个 type 的 pass-by-value 该如何实现。
 - **什么是新 type 的合法值？**对 class 的成员变量而言，通常只有某些数值集是有效的。那些数值集决定了你的 class 必须维护的约束条件（invariants），也就决定了你的成员函数（特别是构造函数、赋值操作符和所谓的“setter”函数）必须进行的错误检查工作。它也影响函数抛出的异常、以及（极少被使用的）函数异常明细列？（exception specifications）。
