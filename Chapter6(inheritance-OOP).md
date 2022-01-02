@@ -18,7 +18,7 @@
 
 ## Item 35 Consider alternatives to virtual functions
 
-- virtual 函数的替代方案包括 NVI（non-virtual interface） 手法及 Strategy 设计模式的多种形成。NVI 手法自身式一个特殊形式的 Template Method 设计模式。sx：NVI 以 public non-virtual 成员函数包裹较低访问性（private 或 protected）的 virtual 函数。还可以将 virtual 函数替换成“函数指针成员变量”或者函数对象（function objection）或者另一个继承体系内的 virtual 函数。
+- virtual 函数的替代方案包括 NVI（non-virtual interface） 手法及 Strategy 设计模式的多种形成。NVI 手法自身是一个特殊形式的 Template Method 设计模式。sx：NVI 以 public non-virtual 成员函数包裹较低访问性（private 或 protected）的 virtual 函数。还可以将 virtual 函数替换成“函数指针成员变量”或者函数对象（function objection）或者另一个继承体系内的 virtual 函数。
 - 将机能从成员函数移到 class 外部函数，带来的一个缺点是，非成员函数无法访问 class 的non-public 成员。
 - tr1::function 对象的行为就像一般函数指针。这样的对象可接纳“与给定之目标签名式（target signature）兼容”的所有可调用物（callable entities）。sx：C++11 标准下可以使用 std::function 代替。
 
